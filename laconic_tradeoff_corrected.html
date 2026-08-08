@@ -1,0 +1,36 @@
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Scatter plot of word reduction versus content retention with the corrected clean Claude point and the contaminated point shown in gray for reference.</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 8px; font-size: 12px; color: var(--text-secondary);">
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #2a78d6;"></span>ChatGPT 82.7% / 67%</span>
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #eb6834;"></span>Claude clean 62.1% / 88%</span>
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #1baf7a;"></span>Gemini 86.4% / 55%</span>
+  <span style="display: flex; align-items: center; gap: 4px;"><span style="width: 10px; height: 10px; border-radius: 2px; background: #888780;"></span>Claude contaminated 32.8% / 100%</span>
+</div>
+<div style="position: relative; width: 100%; height: 320px;">
+  <canvas id="tradeoffChart2" role="img" aria-label="Scatter plot: ChatGPT at 82.7 percent reduction and 66.7 percent retention, clean Claude at 62.1 and 87.9, Gemini at 86.4 and 54.5, with the contaminated Claude point at 32.8 and 100 shown in gray.">ChatGPT 82.7/66.7, Claude clean 62.1/87.9, Gemini 86.4/54.5, Claude contaminated (reference) 32.8/100.</canvas>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const mu4 = getComputedStyle(document.documentElement).getPropertyValue('--text-muted').trim() || '#898781';
+const dk4 = matchMedia('(prefers-color-scheme: dark)').matches;
+const ring4 = dk4 ? '#1a1a19' : '#fcfcfb';
+new Chart(document.getElementById('tradeoffChart2'), {
+  type: 'scatter',
+  data: { datasets: [
+    { label: 'ChatGPT', data: [{x: 82.7, y: 66.7}], backgroundColor: '#2a78d6', borderColor: ring4, borderWidth: 2, pointRadius: 9, pointHoverRadius: 11 },
+    { label: 'Claude (clean)', data: [{x: 62.1, y: 87.9}], backgroundColor: '#eb6834', borderColor: ring4, borderWidth: 2, pointRadius: 9, pointHoverRadius: 11 },
+    { label: 'Gemini', data: [{x: 86.4, y: 54.5}], backgroundColor: '#1baf7a', borderColor: ring4, borderWidth: 2, pointRadius: 9, pointHoverRadius: 11 },
+    { label: 'Claude (contaminated)', data: [{x: 32.8, y: 100}], backgroundColor: '#888780', borderColor: ring4, borderWidth: 2, pointRadius: 6, pointHoverRadius: 8, pointStyle: 'rectRot' }
+  ]},
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: (c) => c.dataset.label + ': ' + c.parsed.x.toFixed(1) + '% reduction, ' + c.parsed.y.toFixed(0) + '% retained' } }
+    },
+    scales: {
+      x: { min: 0, max: 100, title: { display: true, text: 'Word reduction (%)', color: mu4, font: { size: 12 } }, ticks: { color: mu4, callback: (v) => v + '%' }, grid: { color: dk4 ? '#2c2c2a' : '#e1e0d9' } },
+      y: { min: 0, max: 105, title: { display: true, text: 'Tracked content retained (%)', color: mu4, font: { size: 12 } }, ticks: { color: mu4, callback: (v) => v + '%' }, grid: { color: dk4 ? '#2c2c2a' : '#e1e0d9' } }
+    }
+  }
+});
+</script>

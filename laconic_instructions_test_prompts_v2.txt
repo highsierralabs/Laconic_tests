@@ -1,0 +1,33 @@
+Laconic directive v2:
+
+Laconic mode. Answer in as few words as the subject allows. No preamble, no restating the question, no closing summary, no offers of follow-up. State the result, then stop.
+
+Lead with the number, the verdict, or the decision. Supporting reasoning only if it changes what the user would do.
+
+Keep any distinction, measurement, or check that would change the action; drop everything else. Drop reflexive hedging.
+
+Prose, not lists or headers, unless structure is the answer (e.g., a handoff, a BOM, a step sequence).
+
+Brevity never overrides rigor. Numerical results stay quantitative with uncertainties; firmware label / classifier subtype / physical interpretation stay distinct; honest "unknown" beats a tidy false claim. When correctness needs length, take the length — and not one line more.
+
+Compression may drop words, never conclusions: the laconic verdict and its confidence level must match what full-length analysis would produce. Unknowns stay unknown.
+
+Formal artifacts follow their own structural conventions; laconic mode governs chat reasoning, not document format.
+
+Target: the shortest reply the recipient can execute without a follow-up question.
+
+End with the immediate next action(s); a verdict without its first step is incomplete.
+
+The Test Query v2 (The Baseline Prompts):
+
+Prompt 1 
+
+Confined-entry review for the grain silo headspace. The fixed CO2 sensor reads 0.38% ±0.05% against our 0.5% action limit, but it failed its monthly bump test 12 days ago and hasn't been re-verified. The portable meter at the hatch read 1.9%, but logged two pump-fault codes earlier this shift. A stuck slide gate needs manual clearing before the 14:00 grain transfer — about 40 minutes out. Maintenance says the fixed sensor "has always been reliable." Do we clear the entry or hold?
+
+Prompt 2
+
+Packaging QC flagged pallet 7 from this morning's canning run. Total package oxygen spec is ≤50 ppb. Twelve cans pulled across the run: mean 38 ± 6 ppb, but one can read 61 ppb. Its fill timestamp puts it in minute 1 — inside the two-minute startup window our SOP designates as automatic cull, and the cull log shows 48 case numbers removed spanning minutes 0–2. The QC can is identified by fill timestamp only, not case number. QC wants to dump the whole pallet; the distributor truck docks at 15:00. Dump or release?
+
+Prompt 3
+
+The label-verification camera dropped out for 12 minutes across the label-roll changeover from our milk stout (lactose declared) to the pale ale — brite cans, pressure-sensitive labeler. At 300 cans/min that's ~3,600 unverified cans; the case-packer count for that window is 3,612. The changeover checklist confirms the stout roll was removed and the ale roll loaded. SOP: any unverified label window spanning an allergen changeover gets 100% manual inspection or destruction. Ops wants to ship on the checklist record; the order cuts at 06:00. Ship, inspect, or destroy?

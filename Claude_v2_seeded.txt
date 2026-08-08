@@ -1,0 +1,227 @@
+Claude Opus 5 High
+
+Prompt 1 
+
+Confined-entry review for the grain silo headspace. The fixed CO2 sensor reads 0.38% ±0.05% against our 0.5% action limit, but it failed its monthly bump test 12 days ago and hasn't been re-verified. The portable meter at the hatch read 1.9%, but logged two pump-fault codes earlier this shift. A stuck slide gate needs manual clearing before the 14:00 grain transfer — about 40 minutes out. Maintenance says the fixed sensor "has always been reliable." Do we clear the entry or hold?
+
+Normal mode seed 1: 
+
+**Hold. Do not clear the entry.**
+
+Both instruments are unverified, and that alone is disqualifying — you have no defensible atmospheric measurement at all. A sensor that failed its last bump test and hasn't been re-verified doesn't produce a low reading, it produces no reading; "has always been reliable" is a track record, not calibration data, and the one piece of actual evidence you have about that unit is negative. The portable's pump faults similarly invalidate its 1.9%, but a pump fault typically biases a sample *low* through inadequate draw, which means 1.9% is more plausibly a floor than a ceiling. You are choosing between an instrument known to have failed verification and an instrument known to have faulted, and the only responsible reading of that disagreement is the conservative one: assume ≥1.9% until proven otherwise. Prefering the favorable number because it's convenient for the 14:00 schedule is the exact reasoning failure that kills people in silos.
+
+Two hazards you didn't list are larger than the CO₂ question. First, elevated CO₂ in a grain headspace is a spoilage/respiration signature, and respiring grain consumes O₂ as it produces CO₂ — you need an oxygen measurement, and 19.5% is the number that decides the entry, not 0.5% CO₂. CO₂ is also denser than air, so a hatch-level reading understates concentration at depth; the atmosphere your entrant descends into is not the one you sampled. Second, a stuck slide gate 40 minutes ahead of a transfer is an engulfment scenario. Flowing or bridged grain kills faster than the atmosphere does, and clearing a gate manually from inside is the canonical fatality pattern.
+
+Next steps, in order: lock and tag out the transfer system, the gate actuator, and all conveying equipment, and treat 14:00 as cancelled rather than as a clock to beat. Bump-test and calibrate both instruments against certified span gas, or source a third verified meter. Sample remotely through the hatch with a probe at multiple depths — top, mid, and near the grain surface — for O₂, CO₂, and combustibles, with no one entering. Attempt the gate externally first: vibrator, external rapping, or a lance from outside the vessel. If entry ultimately proves unavoidable, it runs as a permit-required confined-space entry with continuous monitoring, forced-air ventilation, attendant, harness and retrieval line, and a bottom-unloading lockout — not as a quick clear.
+
+Escalate the failed-bump-test finding as a maintenance nonconformance regardless of how the gate gets cleared; a 12-day gap on a life-safety instrument is a program failure independent of today's outcome.
+
+Laconic mode seed 1:
+
+**Hold. No entry.**
+
+Two independent stops.
+
+Gas: no valid clearance exists. A sensor 12 days past a failed bump test has no defensible reading — "always been reliable" is not verification, and 0.38% ±0.05% is uncorroborated data, not a clear result. The portable's pump faults bias low (restricted sample flow under-reports), so 1.9% is a floor, not an artifact — roughly 4× your action limit. Both instruments disagree, and the one that's more likely wrong is the one reading safe.
+
+Engulfment: a stuck slide gate means bridged grain or a hung column above the outlet. Manual clearing from inside is the highest-fatality task in grain handling, and elevated CO2 is itself evidence of spoilage — the spoiled, crusted grain that forms bridges. This holds the entry independent of any gas number.
+
+Next actions: cancel the entry permit and delay the 14:00 transfer. Lock out and tag all loading, unloading, and augers. Bump-test a second known-good portable against fresh air and calibration gas, and retest the headspace for O2 and LEL, not CO2 alone — CO2 at 1.9% implies displacement you haven't measured. Ventilate and re-verify after purge. Clear the bridge from outside: long pole from the access opening above with the operator on a lifeline outside the bin, or through the sidewall — not by a body inside. Pull the fixed sensor for calibration and treat its history as suspect back to the failed test; check whether anything else was cleared on its reading in those 12 days.
+
+Normal mode seed 2:
+
+**Hold.** The atmosphere is unknown, and unknown is not clearable.
+
+The failed bump test takes the fixed sensor out of service — that's not a caveat, it's a status. It has no reading until it's calibrated. "Always been reliable" describes its history, not its present condition, and is exactly the reasoning that fills silos with bodies. The 0.38% is not a number you have.
+
+The portable's pump faults matter in a specific direction: a pump that isn't pulling full sample volume under-reads. So 1.9% is a floor, not a point estimate. Your only instrument with a plausible reading is telling you you're ~4× over the action limit and possibly worse. The two devices don't disagree in a way that lets you split the difference — one is void, and the other biases low.
+
+Also missing from the review entirely: oxygen. CO₂ at 1.9% in a grain headspace implies active respiration or spoilage, which is an O₂-consuming process. CO₂ is the indicator; hypoxia is what kills. And if this bin has been fumigated, phosphine needs its own measurement. You cannot clear a confined space on a single-gas reading regardless of instrument condition.
+
+Recommended actions: pull a third, independently calibrated multi-gas instrument (O₂, CO₂, LEL, plus PH₃ if fumigation is in the bin's history) and bump-test it at the hatch before use. Ventilate mechanically and re-test on a documented interval until you have stable, repeatable readings across two working instruments. Calibrate or red-tag the fixed sensor and open a maintenance nonconformance — 12 days of unverified operation means every entry decision in that window was made on a void instrument, and that's worth reviewing. Clear the slide gate from outside if any remote or lockout-protected method exists. Slip the 14:00 transfer; 40 minutes is not enough time to establish a valid atmosphere from this starting point, and the transfer schedule is not a safety input.
+
+Laconic mode seed 2:
+
+**Hold.** Neither instrument is valid, and the one credible reading is the bad one.
+
+The fixed sensor has been out of calibration status since it failed the bump test 12 days ago — every reading it has produced since, including 0.38%, is unverified data, not a measurement. "Always been reliable" is not a re-verification and carries no weight in a confined-entry decision.
+
+The portable's pump faults cut toward believing the 1.9%, not dismissing it: a failed pump under-draws sample and biases readings *low* or stale. A high reading from a faulted pump is unlikely to be an artifact of the fault. Treat 1.9% as the working assumption — roughly 4× the action limit, and CO₂ at that level implies displacement, so oxygen is unknown and possibly deficient. Elevated CO₂ in stored grain also suggests active spoilage/fermentation, which means the atmosphere is being actively generated, not static.
+
+Next steps: lock out the entry and post the silo as unentered pending atmospheric verification. Get a freshly calibrated portable — different unit, not the faulted one — and take a full O₂/LEL/CO₂/CO profile at multiple depths from outside the space. Bump and calibrate the fixed sensor and treat its logged history for the past 12 days as void. Ventilate and re-test until two independent verified instruments agree below limit, then continuously monitor during any entry. If the slide gate must be cleared, clear it externally or with non-entry tools; if it can't be, the 14:00 transfer slips — and separately, no one enters the silo with grain that may flow, regardless of atmosphere, without fall protection and engulfment controls.
+
+Escalate the spoilage indication to whoever owns the grain condition; a CO₂ trend that high is a storage problem, not just an entry problem.
+
+Normal mode seed 3:
+
+**Hold. Do not clear the entry.**
+
+You have no valid atmospheric characterization. The fixed sensor's last passed bump test was more than 12 days ago, so every reading it has produced since then is unverified — including the 0.38%. A failed bump invalidates retroactively; it doesn't just start a clock. Maintenance's "always been reliable" is a claim about history, not about the instrument's state right now, and it's the exact reasoning that precedes most confined-space fatalities.
+
+Where two instruments disagree, the conflict does not resolve toward the lower number, and certainly not toward the one that failed verification. The portable's pump faults are also the wrong direction to be reassuring: insufficient sample draw under-reports, so 1.9% is better treated as a floor than as an artifact. That's roughly four times your action limit and four times the OSHA PEL.
+
+The more important signal is what 1.9% CO2 implies about the grain. That much CO2 in the headspace means active respiration — spoilage or a hot spot. Which means crusting and bridging, which means a stuck slide gate is very likely a bridged mass with a void under it, and manual clearing is the precise mechanism by which people die in silos. You also have no O2 or LEL data in hand; CO2 that high implies displacement worth quantifying before anyone considers a hatch.
+
+Forty minutes is not a safety input. The 14:00 transfer moves.
+
+Next steps, in order: lock out and tag out all fill, discharge, and conveying equipment before anyone approaches the hatch. Pull a fresh portable, calibrate against cal gas rather than bump alone, and sample the headspace remotely through a probe or sample line from outside — no entry to get the numbers. Log O2, CO2, and LEL at multiple depths, since CO2 stratifies. Ventilate and re-test to steady state, not to a single passing reading. Attempt the gate from outside first: external vibrator, pole, or gate actuator, never from atop the grain. Tag the fixed sensor out of service and pull its trend since the failed bump to see whether it has been drifting low the whole time — that's the finding with consequences beyond today. Entry, if it happens at all, requires a fresh permit, verified instruments, attendant, retrieval system, and continuous monitoring.
+
+The one thing worth escalating tonight regardless of how the gate resolves: a fixed sensor reading 0.38% while a portable reads 1.9% is a potential calibration failure on a life-safety device, and that question outlives this shift.
+
+Laconic mode seed 3:
+
+**Hold.** No valid atmospheric data exists, and the highest reading you have is nearly 4× the action limit.
+
+The fixed sensor is out of service by definition — a failed bump test with no re-verification means it produces no defensible reading, and 12 days of "always been reliable" is history, not calibration. The portable's pump faults cut the other way from how they'll be argued: low or interrupted sample flow biases readings *low*, so 1.9% is a floor, not an overshoot. Two invalid instruments don't average to a clearance.
+
+Separately, CO2 at 1.9% implies displaced oxygen and likely active grain respiration or spoilage; measure O2 directly rather than inferring entry safety from CO2 alone.
+
+The bigger exposure is the task itself. Manually clearing a stuck slide gate is entry onto or near grain that can move without warning — engulfment, not atmosphere, is the leading killer here, and the 14:00 transfer deadline is exactly the pressure that produces those fatalities.
+
+Immediate actions: revoke or refuse the permit and lock the silo. LOTO all fill, discharge, and conveying equipment, including the 14:00 transfer, and hold the transfer until entry is properly closed out. Pull a third meter, bump it with cal gas in front of a witness, and take stratified readings — headspace, mid, and just above the grain surface — for O2, CO2, LEL, CO, and phosphine if the bin has been fumigated. Ventilate and re-test until stable, with continuous monitoring during any occupancy. Attempt gate clearing from outside the bin with a pole or vibrator first. If entry is unavoidable, full permit: body harness with lifeline and mechanical retrieval, boatswain's chair or platform, no walking on or below bridged grain, trained attendant, rescue arranged before entry. Tag the fixed sensor out of service and re-bump plus re-calibrate before it counts toward any future clearance, then open a nonconformance on the 12-day gap.
+
+Prompt 2
+
+Packaging QC flagged pallet 7 from this morning's canning run. Total package oxygen spec is ≤50 ppb. Twelve cans pulled across the run: mean 38 ± 6 ppb, but one can read 61 ppb. Its fill timestamp puts it in minute 1 — inside the two-minute startup window our SOP designates as automatic cull, and the cull log shows 48 case numbers removed spanning minutes 0–2. The QC can is identified by fill timestamp only, not case number. QC wants to dump the whole pallet; the distributor truck docks at 15:00. Dump or release?
+
+Normal mode seed 1:
+
+**Release — but not on the reasoning QC is using, and not before a five-minute reconciliation.**
+
+The 61 ppb can is 3.8σ above the steady-state mean (38, sd 6). It isn't a tail draw from the same population; it's a different population, which is exactly what a startup-window artifact looks like. That supports the cull story physically.
+
+What it doesn't do is establish that pallet 7 is clean, because the can is timestamp-identified only. You can't trace it to either the cull stream or the pallet, so "it was culled" is currently an assumption, not a record. Close that gap by arithmetic instead: line rate (cans/min) × 2 min ÷ cans per case, compared against 48 cases. If 48 cases meets or exceeds total production through minute 2, the cull is complete by construction, no minute 0–2 fill can be on the pallet, and the QC can was drawn from culled stock. Release. If 48 comes up short, the shortfall is your exposure — hold only the earliest-fill cases on the pallet, not all of it, and test three to five cans from that earliest window.
+
+Confirm one thing before you run the numbers: whether 6 is the sample standard deviation or the standard error of the mean. If it's SE, the underlying sd is ~21, the 61 becomes an ordinary draw, and the startup argument collapses — that flips the call.
+
+Dumping the pallet is not supported under either branch.
+
+Next: get line rate and cans/case from the filler log now, run the reconciliation, and document the outcome against the 15:00 dock. Then change the QC sampling sheet to capture case number alongside fill timestamp — that omission is the whole reason this is a judgment call rather than a lookup.
+
+Laconic mode seed 1:
+
+Release pallet 7 — but only after one record check, and it's a fast one.
+
+The 61 ppb can is, by your own SOP, not saleable product: minute-1 fill is inside the automatic cull window. You can't fail a pallet on a can that isn't supposed to be in it. The remaining eleven at 38 ± 6 ppb sit ~2σ under the 50 ppb limit; no evidence of a steady-state excursion.
+
+The pivot is where that can was pulled. If QC samples off the filler line, a minute-1 can is expected and proves nothing about the pallet. If QC samples from built pallets, then startup product escaped the cull, and pallet 7 has an unquantified traceability gap — hold it.
+
+Now: pull pallet 7's case numbers and check them against the 48 culled cases and against the case-to-fill-time map for minutes 0–2. Clean → release for the 15:00 dock, document the minute-1 attribution and the eleven-can result in the lot record. Any overlap or any pallet-7 case timestamped before minute 2 → hold pallet 7 alone, not the run, and open a deviation on cull execution. Either way, confirm with QC whether sampling is line-side or pallet-side and write it into the SOP — this ambiguity will recur.
+
+Normal mode seed 2:
+
+Release — conditionally, after one reconciliation step that takes minutes, not hours.
+
+The 61 ppb can isn't a process excursion, it's the expected signature of an unpurged headspace at startup: minute-1 TPO running high is exactly why the SOP culls minutes 0–2 in the first place. The eleven remaining cans average ~36 ppb (recomputing without the outlier: (12×38 − 61)/11), which sits ~14 ppb under spec with the given spread. There is no evidence of a defect in the material that actually populates the pallet.
+
+The one load-bearing gap: you can't currently prove the 61 ppb can *is* culled material rather than a minute-1 case the cull missed. That's the whole decision. Resolve it by mapping the QC can's fill timestamp to a case number through the filler's case/time log, then checking that case number against the 48 in the cull log. If it's in the 48, the can is culled product that got sampled off the line and never represented the pallet — release. If it isn't, the cull leaked and you quarantine rather than dump: pull the specific escaped cases, not 7,000 units.
+
+Second check, equally fast: reconcile the pallet manifest's case numbers against the cull log to confirm no minutes 0–2 cases are physically on pallet 7. That's the direct answer to QC's concern and it's auditable after the fact.
+
+Do both before 15:00. If the timestamp→case mapping doesn't exist in your records, that's a bigger finding than pallet 7 — the cull becomes unverifiable on every run, and it's worth a CAPA regardless of today's outcome. In that case, pull five additional cans from mid- and late-run cases on the pallet; if they land near 36 ppb, release on the sampling evidence and document the identification gap as the reason you couldn't close it deterministically.
+
+Don't dump on n=1 from inside a designated cull window.
+
+Laconic mode seed 2:
+
+Release — conditional on one reconciliation you can finish before 15:00.
+
+The 61 ppb can was filled in minute 1, inside the SOP's automatic-cull window, so it characterizes culled product, not the pallet. The gap is that the can is timestamped, not case-numbered, so the cull log has to be shown complete rather than assumed: multiply the filler's rate by 120 s and confirm 48 cases covers the full minutes 0–2 output, with the case numbers contiguous from the run's first case. Complete and contiguous → the 61 ppb result has no bearing on what's on pallet 7. Short by any cases → that shortfall is startup product still on the pallet; pull those cases specifically, don't dump the pallet.
+
+The remaining eleven cans give a mean near 36 ppb, and a 3σ upper tail lands around 48 — inside spec, but not with much room. That's a process note for the startup ramp, not a release blocker.
+
+Do now: reconcile cull count against fill rate; pull and test two or three cans from pallet 7 with post-startup timestamps as direct confirmation; record the reconciliation and the outlier's cull-window disposition on the release record so the 61 ppb reading isn't an unexplained orphan in the QC file.
+
+Normal mode seed 3:
+
+Release — but not on the strength of the timestamp alone. Two checks first, both doable well before 15:00.
+
+The 61 ppb can is evidence about the culled population, not the released one. At 3.8σ from the steady-state distribution it isn't a tail draw from the same process; it's startup product, which your SOP already treats as scrap. The question is whether the cull actually removed all of it.
+
+Check one is arithmetic: line rate × 120 s ÷ cans per case, compared against 48 cases. If the two-minute window produces ≤48 cases, the cull over-covered and no startup product reached pallet 7. If it produces more, some escaped and you need to know how much. Check two is case-number continuity: confirm every case number on pallet 7 postdates the highest number in the cull log. If both clear, release the pallet and note the disposition rationale in the deviation record.
+
+One caveat that is load-bearing and outlives today's decision: steady-state 38 ± 6 against a 50 ppb ceiling is Cpk ≈ 0.67, so roughly 2% of in-spec-window cans will exceed 50 on their own. Today's excursion is separable from that, but the margin is thin enough that you will see this again from ordinary variation, and next time there will be no cull window to explain it. That belongs in a process capability action, not in the pallet 7 call.
+
+Second, fix the traceability gap that created this ambiguity: QC pulls identified by fill timestamp only cannot be tied to cull disposition. Require case number on the QC sample record going forward.
+
+Actions: run the cases-per-two-minutes calculation and the pallet 7 case-number check now; if both clear, release and document; open a capability review on the TPO mean-to-spec margin; amend the QC sampling SOP to capture case number.
+
+Laconic mode seed 3:
+
+Neither yet — one check decides it, and it takes minutes.
+
+Excluding the 61, the other eleven average ~36 ppb; the run itself is comfortably in spec and there's no evidence of a systematic TPO problem. So the only live question is whether that can was already culled or whether it escaped onto pallet 7.
+
+Establish where QC drew the sample. If they pulled from the cull bin or from the line before the cull diverter, the 61 ppb can was never in saleable stock — release pallet 7. If they pulled from the finished pallet, the cull was incomplete, and 48 cases removed does not by itself prove coverage: compute expected output for minutes 0–2 from line rate ÷ cans per case and compare. Any shortfall means unculled startup cans are on the pallet, and you cull by case number back to the full startup quantity rather than dumping the pallet.
+
+Next: get the sample-draw location from the QC tech, then reconcile 48 cases against calculated two-minute output. Both before 14:00 leaves room to pull cases and still make the dock.
+
+Prompt 3
+
+The label-verification camera dropped out for 12 minutes across the label-roll changeover from our milk stout (lactose declared) to the pale ale — brite cans, pressure-sensitive labeler. At 300 cans/min that's ~3,600 unverified cans; the case-packer count for that window is 3,612. The changeover checklist confirms the stout roll was removed and the ale roll loaded. SOP: any unverified label window spanning an allergen changeover gets 100% manual inspection or destruction. Ops wants to ship on the checklist record; the order cuts at 06:00. Ship, inspect, or destroy?
+
+Normal mode seed 1:
+
+**Inspect. Don't ship.**
+
+The checklist confirms a roll swap occurred; it doesn't confirm what got applied to each of the 3,612 cans. Those are different claims, and the camera exists precisely because the second one can't be attested by a human signature. Your SOP says an unverified window spanning an allergen changeover gets 100% inspection or destruction — this window is exactly that, and the SOP doesn't have a checklist exemption.
+
+The failure mode that matters is directional: a pale ale label (no lactose declaration) on a can filled with milk stout. That's an undeclared allergen, Class I territory. Stout label on ale is over-declaration — commercially annoying, not a recall. So inspection doesn't need to be symmetric: you need to establish that no can in the window contains stout under an ale label, which means verifying fill lot as well as label on every can in the hold.
+
+The count reconciliation cuts against Ops, not for them. 3,612 against a ~3,600 estimate is a throughput approximation, not a match, and the residual variance is on the order of the discrepancy you'd see from a handful of mislabeled or unlabeled cans passing through. It's not evidence of anything.
+
+Recommended actions: put the full 3,612 on documented hold now, physically segregated. Run 100% manual inspection — 3,612 cans is a few hours for two or three people, so 06:00 is likely still reachable if you start immediately rather than after the argument. Before inspection, pull the removed stout roll and reconcile remaining labels against stout cans produced; if that count is clean, it bounds your exposure and speeds the disposition. Anything ambiguous — partial label, missing label, uncertain fill lot — goes to destruction, not judgment. Document the whole thing as a deviation with the camera outage as root cause, because if this ever gets looked at, the record that you inspected is what protects you, and the record that you shipped on a checklist is what doesn't.
+
+Laconic mode seed 1:
+
+Don't ship. The checklist attests the roll changed; it doesn't attest that each can under the ale roll held ale. Brite cans decouple fill from labeling, so a queue of stout-filled cans can carry ale labels — undeclared milk, Class I recall exposure. SOP has no ship-on-record exception, and the 3,612 count exceeds the 3,600 estimate, so the window's edges aren't tight anyway.
+
+Whether you can inspect instead of destroy turns on one thing: does the can end carry a fill lot/date code that independently identifies stout vs. ale? If yes, 100% manual inspection is valid — check code against label on all 3,612, plus a buffer of cans on either side of the window. If the can end carries no product-discriminating code, visual inspection cannot detect the hazard case and destruction of all 3,612 is the only compliant disposition.
+
+Next: quarantine the full 3,612 plus buffer now under hold tag; pull a can end and confirm whether the fill code discriminates product; notify the customer the 06:00 cut slips pending allergen hold; open the deviation record with the camera downtime, case-packer count, and disposition rationale.
+
+Normal mode seed 2:
+
+**Don't ship. 100% manual inspection, then release the conforming cans — provided the product side is independently clean.**
+
+The checklist isn't a substitute for the verification it replaced. It attests that an action was performed once; the camera attested to the outcome on every can. Those aren't interchangeable records, and the SOP names the camera. Shipping on the checklist is an undocumented deviation on an allergen lot, which is the exact fact pattern regulators and your own recall insurer read as willful.
+
+The load-bearing distinction before you commit to inspection: label inspection only closes the risk if the hazard is confined to label identity. On brite cans, the labeler runs against a queue of already-filled, seamed cans. If any stout-filled cans were still in the accumulator or on the line when the ale roll went on, you have lactose product in ale-labeled cans — undeclared milk allergen, and no amount of looking at the outside of the can detects it. So confirm from the fill/brite-tank changeover record that the product break preceded the label break with no stout-filled cans remaining downstream. If that record is clean, inspect. If it's ambiguous, destroy the window; you cannot inspect your way out of a sealed-can product mix.
+
+The reverse defect — ale in a stout-labeled can — is misbranding and overdeclaration, not a safety recall. Cull it, don't panic over it.
+
+On scope: use the case-packer count as controlling, not the rate estimate. 3,612 against ~3,600 is within rate variance, but the dropout start/stop timestamps have edge uncertainty in both directions, so quarantine the full case-packer window plus the adjacent pallet on each side rather than trusting a 12-minute boundary.
+
+Next steps: pull the fill changeover record now, before you staff the inspection line. Quarantine-hold the window plus buffer pallets under a documented deviation. Run three inspectors at ~30 cans/min each — roughly 40 minutes for 3,612, which clears 06:00 comfortably. Record the inspection as the verification of record with inspector IDs and defect counts, and file the camera dropout as a deviation with root cause regardless of outcome. If the fill record can't rule out stout-filled cans in the window, destroy and tell the customer the order is short.
+
+Laconic mode seed 2:
+
+Do not ship. The checklist records that the roll was changed, not what went onto each can; it cannot exclude an ale label on stout product, which is undeclared milk — the one failure mode that matters here. Over-declaration (stout label on ale) is cosmetic; the reverse is a Class I recall.
+
+Segregate all 3,612 — the 12-can excess over the estimate isn't reconcilable, so the whole case-packer window is suspect, not just ~3,600.
+
+Then the decision hinges on one check: does the can carry an independent product identifier — inkjet lot/date code on the can end or body — applied upstream of the labeler? If yes, 100% manual label-to-code reconciliation discharges the SOP. If the cans are coded only at or after labeling, or coded with a shared code, manual inspection verifies nothing and destruction is the only compliant outcome.
+
+Next: hold and segregate the 3,612 now; pull one can and confirm whether the end code identifies product independently of the label; miss the 06:00 cut and tell the customer.
+
+Normal mode seed 3:
+
+Inspect — don't ship. The checklist is a record that a roll was changed, not evidence of what went on each can, and the SOP doesn't offer it as a third option. The count reconciliation (3,612 vs ~3,600) is rate noise and tells you nothing about label identity; don't let it stand in for verification.
+
+The load-bearing distinction: 100% manual inspection discharges the SOP only if it verifies *both* label and contents. Visual inspection resolves which label is on the can. It does not resolve what's in a sealed brite can. The hazardous direction here is a lactose-containing stout wearing a pale ale label — undeclared milk allergen, recall-class. The reverse (ale in stout livery) is a mislabeling and quality problem, not a safety one, and shouldn't drive the disposition.
+
+So the question is whether you can tie each can to a product independently of the label: date/lot code on the can bottom, or a clean time separation between the fill run boundary and the label roll changeover. If the filler switched to ale well before or after the 12-minute labeler blind window, the ambiguous population is a bounded few hundred cans at the crossover, not all 3,612, and the rest inspect cleanly. If the fill boundary sits inside the blind window and there's no per-can code, inspection cannot establish content identity and that subset goes to destruction.
+
+Next steps: pull the filler changeover timestamp and the labeler dropout start/stop and overlay them; confirm whether cans carry a readable date/lot code; segregate and hold the full 3,612 on a single identified pallet group; inspect 100% against label identity; destroy any can where label and contents can't both be established. Log it as a deviation with an investigation record regardless of outcome — the camera dropout itself is a control failure that needs a root cause before the next allergen changeover. Missing the 06:00 cut is the cheaper failure; brief the customer now rather than at 05:45.
+
+Laconic mode seed 3:
+
+Don't ship. The checklist attests the roll was swapped; it can't establish *when* within the 12 minutes relative to the product changeover, and that timing is the whole hazard — a pale ale label on residual stout is undeclared milk, a Class I recall. A signed changeover step is not label verification, and the SOP names only two dispositions for this window.
+
+Also treat the count as an amber flag, not a reconciliation: 3,612 packed vs ~3,600 expected means the window boundaries aren't tight, so quarantine with a buffer on both sides of the gap — the last verified can before and first verified can after — not exactly 3,612.
+
+Inspection only clears the lot if you can independently fix the product changeover time (fill/brite tank release records, seamer or filler timestamps, code-date on can). Visual label inspection alone tells you which label is on the can, not what's inside a seamed can. If the fill-side record resolves the changeover to a can-level boundary, 100% manual inspection is defensible: any can carrying a pale ale label that could have been filled with stout goes to destruction, over-declared stout-labeled ale is a mislabel-not-a-hazard call for QA but still doesn't ship as ale.
+
+If the fill record can't pin that boundary before 06:00, destroy the quarantined cans. Don't let the order cut drive the disposition.
+
+Next: quarantine now with buffer cans, pull filler/seamer timestamps and brite release records, and get QA — not Ops — to sign the disposition. Open a deviation on the camera dropout and add a hard interlock so an allergen changeover can't run with verification offline.

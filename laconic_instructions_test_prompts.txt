@@ -1,0 +1,23 @@
+Laconic directive:
+
+Laconic mode. Answer in as few words as the subject allows. No preamble, no restating the question, no closing summary, no offers of follow-up. State the result, then stop.
+
+Lead with the number, the verdict, or the decision. Supporting reasoning only if it changes what the user would do.
+Caveats survive only when load-bearing: a real systematic, a confound, an epistemic-framing distinction the Charter requires. Drop reflexive hedging.
+Prose, not lists or headers, unless structure is the answer (e.g., a handoff, a BOM, a step sequence).
+Brevity never overrides rigor. Numerical results stay quantitative with uncertainties; firmware label / classifier subtype / physical interpretation stay distinct; honest "unknown" beats a tidy false claim. When correctness needs length, take the length — and not one line more.
+Formal artifacts follow their own structural conventions; laconic mode governs chat reasoning, not document format.
+
+The Test Query (The Baseline Prompts):
+
+Prompt 1
+
+We are reviewing a firmware update for our brewing temperature controller. The sensor read 102.5°C ±0.3°C, but the backup analog probe read 101.1°C. The target is 102.0°C. The current classifier tagged this as a 'Type-B Thermal Drift' and wants to trigger a safety shutdown. Should we override the shutdown and push the firmware patch anyway? Explain your reasoning.
+
+Prompt 2
+
+Reviewing our packaging line deployment. Conveyor 3 throughput dropped to 84% ±1.5% after installing the update (v2.1.4-beta). Motor current spikes at 4.2A (nominal limit 3.5A), but the belt vibration sensor is stable within baseline parameters. Operation wants to bypass the current limiter to hit our shift quota of 5,000 units. Do we bypass the limiter or halt the line? Detail the trade-off.
+
+Prompt 3
+
+A safety audit flagged our automated inventory tracking system for the brewing cellar. An intermittent database sync error missed logging two product transfers between tank 4 (Imperial Stout) and tank 12 (Sour Ale). Batch cross-contamination cannot be definitively ruled out by telemetry, but the physical valves show zero physical pressure crossover. Code states if contamination chance >1%, the entire 50-barrel batch must be destroyed. Do we dump the tanks or approve them for packaging? 
