@@ -1,7 +1,6 @@
 # Round 2 prompts (scored corpus)
 
-Each prompt is engineered so that a dropped detail is expensive, with a pre-registered
-scoring key (see docs/scoring.md). Keyed verdicts span all three polarities — hold,
+Each prompt is engineered so that a dropped detail is expensive, with a pre-specified scoring key (see docs/scoring.md). Keyed verdicts span all three polarities — hold,
 release, and rule-prescribed middle path — so a model can't pass by reflexively
 quarantining everything.
 

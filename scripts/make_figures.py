@@ -24,7 +24,8 @@ labels = ["Instrument validity", "Re-test path", "O2 / multi-gas", "LOTO / isola
           "Inspect/destroy tree", "Fill-vs-label pivot"]
 scores = collections.defaultdict(int)
 for r in csv.DictReader(open(f"{ROOT}/results/scores_items.csv")):
-    scores[(r["model"], r["item"])] += int(r["retained"])
+    if r["mode"] == "laconic":
+        scores[(r["model"], r["item"])] += int(r["retained"])
 totals = {m: sum(scores[(m, it)] for it in item_order) for m in MODELS}
 
 # Fig 1

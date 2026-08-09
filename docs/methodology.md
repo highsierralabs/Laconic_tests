@@ -21,7 +21,7 @@ floor, a sharpened retention test, and a sufficiency target. One design note: th
 round-1 test directive lacked a next-steps clause; its absence plausibly explains the
 missing protocols.
 
-## Round 2 — fresh prompts, pre-registered keys
+## Round 2 — fresh prompts, pre-specified keys
 
 Three new prompts (silo / pallet / label) engineered so dropped details are expensive,
 with scoring keys written before the runs and keyed verdicts spanning hold, release,
@@ -33,8 +33,8 @@ which is why scoring is key-anchored rather than normal-vs-laconic consistency.
 ## Round 3 — seeded replication (n=3 per cell)
 
 Two additional independent draws per cell (fresh chats; regenerate-in-thread does not
-count). 54 generations. Verdict gate 27/27 laconic. Second-tier drops proved largely
-systematic per model rather than random: 27 of the 33 model-item cells are unanimous
+count). 54 generations. Verdict gate 27/27 laconic. Second-tier drops proved stable per
+model across the observed draws rather than random: 27 of the 33 model-item cells are unanimous
 across seeds (0/3 or 3/3), and each model's zeros are stable — ChatGPT 0/3 on
 O2/multi-gas, engulfment stop, and fill-vs-label pivot; Gemini 0/3 on lockout, count
 honesty, engulfment stop, and fill-vs-label pivot; Claude zero items at 0/3. The six
@@ -43,7 +43,7 @@ variance is real. The corresponding presence of dropped items in the same models
 normal-mode replies is a reading of the transcripts, not scored data; see
 docs/scoring.md, "Known limitations." A proposed v3 clause was dropped when its
 motivating example proved to be sampling variance (1 of 6 generations). One
-verbatim-duplicate pair flagged a data-quality issue, resolved by an extra draw.
+verbatim-duplicate pair flagged a data-quality issue, resolved by an independent replacement draw (data/raw/ChatGPT_p1_laconic_s3_replacement.txt), substituted by the parser for seed 3.
 
 ## Contamination and rerun
 
@@ -68,7 +68,7 @@ Claude rerun.
 
 ## Protocol lessons worth stealing
 
-Pre-register keys before running. Score key-anchored, both modes. Seed n>=3 in fresh
+Pre-specify keys before generating — and commit them publicly before the runs so the claim is independently auditable. Score key-anchored, both modes. Seed n>=3 in fresh
 chats before concluding anything from a single draw. Probe for instruction-layer
 contamination (ask the model your name in a supposedly clean session). Report cells as
 n/3, not pass/fail.

@@ -1,6 +1,8 @@
 # Scoring protocol
 
-Two layers, applied in order. Keys were written before the round-2 runs (pre-registered).
+Two layers, applied in order. Keys were written before the round-2 runs (pre-specified; not publicly timestamped —
+future rounds should commit keys to the repo before generation so this is
+independently auditable).
 
 ## Layer 1 — verdict gate (pass/fail, applied first)
 
@@ -47,10 +49,11 @@ note). The retention axis measures content DELIVERED, blending model capability 
 directive compliance — intentional, since the laconic reply is all the user receives.
 Single scorer; n=3 per cell; one domain (industrial/food-safety decisions).
 
-**Normal-mode replies are not item-scored.** `results/scores_items.csv` covers the 27
-laconic replies only (11 items x 3 seeds x 3 models = 99 observations). Statements
+**Normal-mode replies are not yet item-scored.** `results/scores_items.csv` carries a
+`mode` column; the 99 populated observations are laconic (11 items x 3 seeds x 3 models). Statements
 elsewhere in this repo about an item being present in a model's *normal* answers but
 absent from its laconic one are reading of the transcripts in `data/responses/`, not
 scored data — check them there. Scoring both modes on the full rubric is the obvious
 next increment and would make the "compression dropped it" claim quantitative rather
-than illustrative.
+than illustrative. That pass should be blinded: scripts/blind_export.py exports response
+bodies under randomized IDs with model and mode labels stripped.

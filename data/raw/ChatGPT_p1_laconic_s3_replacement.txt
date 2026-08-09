@@ -1,11 +1,8 @@
----
-model: ChatGPT
-prompt: 1
-prompt_slug: silo-entry
-mode: laconic
-seed: 3
-words: 74
----
+# Independent replacement for ChatGPT Prompt 1 laconic seed 3.
+# The original ChatGPT_v2_seeded.txt seed-3 section is a verbatim paste
+# duplicate of seed 2; this draw was generated separately to restore three
+# independent observations for the cell. scripts/parse_transcripts.py
+# substitutes this body for (ChatGPT, P1, laconic, seed 3).
 
 HOLD — high confidence. Neither CO₂ reading is trustworthy: the fixed sensor failed verification; the portable showed 1.9%, above your 0.5% limit, and has pump faults. OSHA requires acceptable entry conditions verified by tested/calibrated instrumentation before entry. ([OSHA](https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.146?utm_source=chatgpt.com))
 Do not enter. Isolate/LOTO the slide gate and all hazardous grain-handling equipment; obtain a verified calibrated meter, test the silo atmosphere, ventilate if needed, and clear entry only after compliant readings and permit/rescue controls are confirmed. ([OSHA](https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.272?utm_source=chatgpt.com))

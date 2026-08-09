@@ -5,6 +5,9 @@ Handles the paste quirks in the raw files: CRLF endings, case-variant markers
 ("Normal Mode seed 1:", "seed2"), and a mislabeled seed (assigned by section order).
 Corpus rule: ChatGPT + Gemini from *_v2_seeded.txt, Claude from Claude_v2_seeded_rerun.txt
 (the contaminated Claude_v2_seeded.txt is excluded; see docs/methodology.md).
+One cell override: ChatGPT P1 laconic seed 3 is read from
+data/raw/ChatGPT_p1_laconic_s3_replacement.txt, replacing the paste-duplicate
+section in ChatGPT_v2_seeded.txt (preserved byte-for-byte as provenance).
 """
 import re, csv, os
 
@@ -38,6 +41,9 @@ def main():
         for p, mode, seed, text in sections(f"{RAW}/{fn}"):
             corpus[(model, p, mode, seed)] = text
     assert len(corpus) == 54, f"expected 54 sections, got {len(corpus)}"
+    repl = open(f"{RAW}/ChatGPT_p1_laconic_s3_replacement.txt", encoding="utf-8").read()
+    body = "\n".join(l for l in repl.splitlines() if not l.startswith("#")).strip()
+    corpus[("ChatGPT", 1, "Laconic", 3)] = body
     rows = []
     for (m, p, mode, s), text in sorted(corpus.items()):
         w = clean_count(text)
@@ -46,7 +52,7 @@ def main():
             f.write(f"---\nmodel: {m}\nprompt: {p}\nprompt_slug: {SLUGS[p]}\n"
                     f"mode: {mode.lower()}\nseed: {s}\nwords: {w}\n---\n\n{text}\n")
     with open(f"{ROOT}/results/word_counts.csv", "w", newline="") as f:
-        wtr = csv.writer(f)
+        wtr = csv.writer(f, lineterminator="\n")
         wtr.writerow(["model", "prompt", "prompt_slug", "mode", "seed", "words"])
         wtr.writerows(rows)
     print(f"wrote {len(rows)} responses + word_counts.csv")

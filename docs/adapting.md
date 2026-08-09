@@ -43,7 +43,7 @@ Every invariant exists because its absence produced a measured failure. Without 
 
 The same directive lands differently per model; tune for the one you run.
 
-- **ChatGPT** compressed 82.7% and held verdicts and structure, but dropped companion hazards it named in its own long-form answers (O2/multi-gas 0/3, engulfment stop 0/3, fill-vs-label pivot 0/3) and defaulted conservative on release-shaped calls. It held lockout/isolation 3/3 — the companion-hazard loss is selective, not uniform. If companion checks matter to you, add: *"Name companion hazards or checks the verdict depends on, even if unasked."*
+- **ChatGPT** compressed 81.3% and held verdicts and structure, but dropped companion hazards it named in its own long-form answers (O2/multi-gas 0/3, engulfment stop 0/3, fill-vs-label pivot 0/3) and defaulted conservative on release-shaped calls. It held lockout/isolation 3/3 — the companion-hazard loss is selective, not uniform. If companion checks matter to you, add: *"Name companion hazards or checks the verdict depends on, even if unasked."*
 - **Gemini** compressed hardest (86.4%) and dropped the most (18/33): lockout/isolation 0/3, count honesty 0/3, engulfment stop 0/3, fill-vs-label pivot 0/3. (The *reconciliation check* is a different item, and all three models retained it 3/3.) Compression also hides reasoning errors — a hazard-direction inversion visible in its long answers disappeared from its short ones without being fixed. Spot-check its normal mode occasionally even if you only use laconic.
 - **Claude** retained most (29/33) and stayed ~3x more verbose (62.1% reduction); it resolves the brevity/rigor tension toward rigor. If the length chafes, add: *"Name the check, not the mechanism"* — accepting it may cost useful inferences (e.g., "pump faults bias the reading low, so treat 1.9% as a floor").
 
@@ -56,7 +56,7 @@ Per-chat paste is safest while tuning. Project-level instructions scope it to on
 Never judge an instruction edit on one generation.
 
 1. Write 2–3 prompts from your own domain where a dropped detail is costly.
-2. Pre-register the key per prompt: the correct verdict, and the items a passing reply must carry.
+2. Pre-specify the key per prompt, before generating (commit it somewhere timestamped if you want it auditable): the correct verdict, and the items a passing reply must carry.
 3. Run each prompt in fresh chats, n=3 per mode (regenerate-in-thread doesn't count).
 4. Score in order: verdict gate first (right decision, no manufactured certainty, unknowns stay unknown), item retention second, word count last.
 5. Report cells as n/3. A directive that passes the gate 9/9 and holds your items at the lowest word count wins.
