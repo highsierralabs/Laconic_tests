@@ -56,4 +56,8 @@ absent from its laconic one are reading of the transcripts in `data/responses/`,
 scored data — check them there. Scoring both modes on the full rubric is the obvious
 next increment and would make the "compression dropped it" claim quantitative rather
 than illustrative. That pass should be blinded: scripts/blind_export.py exports response
-bodies under randomized IDs with model and mode labels stripped.
+bodies under randomized IDs with model and mode labels stripped. URLs in bodies are
+neutralized to `[url]`: in this corpus, citation URLs — including vendor tracking
+parameters — are model-attributable. Stylistic identifiability (formatting, phrasing)
+cannot be stripped without destroying the scoring target, so the blind is partial by
+design; auditability rests on per-item score justifications and two-scorer agreement.
