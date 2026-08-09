@@ -1,0 +1,10 @@
+# Normalize text to LF in the repository by default.
+* text=auto eol=lf
+
+# Raw transcripts are provenance: preserve their exact bytes, CRLF and all.
+# Without this, autocrlf/eol normalization silently rewrites the line endings
+# that data/raw/README.md documents as original-paste artifacts.
+data/raw/** -text
+
+# Figures are binary.
+*.png binary

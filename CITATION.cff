@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this directive, data, or protocol, please cite it as below."
+title: "Laconic_tests: measuring what LLM verbosity compression costs"
+authors:
+  - family-names: Granholm
+    given-names: Kris E.
+type: dataset
+url: "https://github.com/highsierralabs/Laconic_tests"
+license:
+  - CC-BY-4.0
+  - MIT
+license-url: "https://github.com/highsierralabs/Laconic_tests#license-and-citation"
+date-released: 2026-08-09

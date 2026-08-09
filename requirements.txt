@@ -1,0 +1,7 @@
+# Needed only by scripts/make_figures.py.
+# scripts/parse_transcripts.py is standard library only — no install required.
+#
+# Versions used to generate the committed figures. Loosened to >= because the
+# script uses no version-specific API; pin with == if you need byte-identical PNGs.
+matplotlib>=3.7.5
+numpy>=1.24.4
