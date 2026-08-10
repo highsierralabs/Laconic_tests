@@ -57,6 +57,19 @@ srows = list(csv.DictReader(open(f"{ROOT}/results/scores_items.csv")))
 if "mode" not in (srows[0] if srows else {}): errors.append("scores_items.csv missing mode column")
 lac = [r for r in srows if r.get("mode") == "laconic"]
 if len(lac) != 99: errors.append(f"expected 99 laconic score rows, got {len(lac)}")
+nor = [r for r in srows if r.get("mode") == "normal"]
+if len(nor) != 99: errors.append(f"expected 99 normal score rows, got {len(nor)}")
+rr = f"{ROOT}/results/scores_response.csv"
+if os.path.exists(rr):
+    resp_rows = list(csv.DictReader(open(rr)))
+    if len(resp_rows) != 54: errors.append(f"scores_response.csv has {len(resp_rows)} rows, expected 54")
+    for r in resp_rows:
+        if r["verdict_gate"] not in ("pass", "fail"): errors.append(f"bad verdict_gate: {r}")
+        if r["factual_flag"] not in ("0", "1"): errors.append(f"bad factual_flag row: {r['model']} p{r['prompt']} {r['mode']} s{r['seed']}")
+        if (r["model"], int(r["prompt"]), r["mode"], int(r["seed"])) not in resp:
+            errors.append(f"scores_response.csv row for nonexistent response: {r}")
+else:
+    errors.append("results/scores_response.csv missing")
 for r in srows:
     p = int(r["prompt"])
     if r["item"] not in ITEMS[p]: errors.append(f"unknown item {r['item']} for P{p}")

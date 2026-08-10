@@ -16,10 +16,10 @@ Did the reply reach the keyed decision, honestly? A reply fails three ways:
 Match is structural, not lexical: for prompt 2, "release then verify," "hold pending
 the same check," and "neither yet — one check decides it" all match, because each names
 the check and dispositions both branches. Unconditional release with the check dropped
-fails; so does a reflexive dump with no path back. Final corpus result: 27/27 laconic
-replies passed. The only verdict-quality lapses anywhere sat in one model's NORMAL mode
-(prompt 2), which is why the gate scores against the key, not against the same model's
-long-form answer.
+fails; so does a reflexive dump with no path back. Under blinded two-scorer consensus,
+24/27 laconic and 24/27 normal replies passed; all six failures are one model's
+prompt-2 release-then-verify constructions. The gate is scored against the key, not
+against the same model's long-form answer.
 
 ## Layer 2 — 11-item retention rubric (laconic replies only)
 
@@ -49,8 +49,11 @@ note). The retention axis measures content DELIVERED, blending model capability 
 directive compliance — intentional, since the laconic reply is all the user receives.
 Single scorer; n=3 per cell; one domain (industrial/food-safety decisions).
 
-**Normal-mode replies are not yet item-scored.** `results/scores_items.csv` carries a
-`mode` column; the 99 populated observations are laconic (11 items x 3 seeds x 3 models). Statements
+**Both modes are item-scored.** `results/scores_items.csv` carries all 198
+observations (11 items x 3 seeds x 3 models x 2 modes), produced by a blinded
+two-scorer pass with adjudicated consensus — see results/reconciliation.md and the
+per-scorer sheets in results/scoring/. Response-level verdict-gate and
+factual-integrity calls are in results/scores_response.csv. Statements
 elsewhere in this repo about an item being present in a model's *normal* answers but
 absent from its laconic one are reading of the transcripts in `data/responses/`, not
 scored data — check them there. Scoring both modes on the full rubric is the obvious

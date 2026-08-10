@@ -11,11 +11,15 @@ for a paste-duplicated draw (see data/raw/README.md).
 |---|---|---|---|---|---|
 | ChatGPT | 2,171 | 407 | 81.3% | 22/33 | 9/9 |
 | Claude | 4,668 | 1,768 | 62.1% | 29/33 | 9/9 |
-| Gemini | 3,974 | 539 | 86.4% | 18/33 | 9/9 |
+| Gemini | 3,974 | 539 | 86.4% | 18/33 | 6/9 |
 
-Corpus reduction: 10,813 -> 2,714 words (74.9%). Laconic verdict gate: 27/27. The only
-verdict-quality lapses in the corpus are in Gemini's NORMAL mode on prompt 2 (2 of 3
-seeds overclaim release before the reconciliation check).
+Corpus reduction: 10,813 -> 2,714 words (74.9%). Verdict gate under two-scorer
+consensus: laconic 24/27, normal 24/27 — all six failures are Gemini prompt 2 (both
+modes, all seeds): release announced with verification framed as execution rather than
+as a gate, plus manufactured certainty in the rationale. Factual-integrity flags: 17 of
+54 responses (Gemini 10, Claude 6, ChatGPT 1); per-response notes are in
+results/scores_response.csv, and the full reconciliation record is
+results/reconciliation.md.
 
 ## Figures
 
@@ -35,3 +39,20 @@ uniform top rows show all three models agree on the verdict-critical core. 27 of
 model-item cells are unanimous across seeds; the six split cells (1/3 or 2/3) are
 ChatGPT count honesty, Claude lockout / engulfment stop / fill-vs-label pivot, and
 Gemini O2-multi-gas / inspect-destroy tree. Items are unweighted.
+
+## Paired normal-vs-laconic retention (two-scorer consensus)
+
+| Model | Normal items | Laconic items | Lost under compression | Gained | Loss rate |
+|---|---|---|---|---|---|
+| ChatGPT | 27/33 | 22/33 | 5 | 0 | 18.5% |
+| Claude | 33/33 | 29/33 | 4 | 0 | 12.1% |
+| Gemini | 25/33 | 18/33 | 8 | 1 | 32.0% |
+
+Loss rate = item-observations present in normal but absent in laconic, over those
+present in normal. The compression-loss claim is now quantitative: e.g., Gemini's
+laconic replies lose 8 of the 25 item-observations its normal mode carries — O2/multi-gas
+(-2), lockout (-2), engulfment (-3), inspect/destroy tree (-1) — and gain one, the
+prompt-2 reconciliation check its normal seed 1 lacked. Claude loses least in both
+absolute and rate terms; its four losses are lockout (-2), engulfment (-1), and the
+fill-vs-label pivot (-1). ChatGPT's five losses concentrate in O2/multi-gas (-3).
+Item-level detail: results/scores_items.csv.

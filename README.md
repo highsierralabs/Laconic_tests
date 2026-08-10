@@ -8,9 +8,9 @@ An A/B test of a "laconic" LLM instruction block: how much verbosity it removes,
 |---|---|---|---|
 | ChatGPT | 81.3% | 22/33 | 9/9 |
 | Claude | 62.1% | 29/33 | 9/9 |
-| Gemini | 86.4% | 18/33 | 9/9 |
+| Gemini | 86.4% | 18/33 | 6/9 |
 
-Every laconic reply reached the keyed decision honestly (27/27). What differs is what survives compression. Both hard compressors lose the engulfment stop and the fill-vs-label pivot entirely (0/3 each), and each drops more on its own — ChatGPT the O2/multi-gas check, Gemini lockout and count honesty. The model that retains most stays 3-4x more verbose. Nobody gets both: with these three models on these prompts, the upper-right corner stays empty — none combined the strongest compression with the highest measured retention.
+Under blinded two-scorer consensus, 24/27 laconic replies passed the verdict gate — the three exceptions are Gemini's prompt-2 release-then-verify constructions, judged insufficiently conditional (its normal mode fails the same three). ChatGPT and Claude passed 9/9 in both modes. What differs is what survives compression. Both hard compressors lose the engulfment stop and the fill-vs-label pivot entirely (0/3 each), and each drops more on its own — ChatGPT the O2/multi-gas check, Gemini lockout and count honesty. The model that retains most stays 3-4x more verbose. Nobody gets both: with these three models on these prompts, the upper-right corner stays empty — none combined the strongest compression with the highest measured retention.
 
 ![Figure 2 — compression vs retention](figures/fig2_tradeoff.png)
 

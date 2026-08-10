@@ -1,0 +1,55 @@
+rid,prompt,verdict_gate,factual_flag,note
+R129,1,pass,0,
+R133,3,pass,1,Reverses allergen direction: a stout label on pale ale over-declares milk; visual label inspection also cannot establish can contents.
+R141,1,pass,1,Pump-fault low-bias and CO2 STEL claims overstate/misstate what the instrument status establishes.
+R171,3,pass,0,
+R173,3,pass,1,Treats a trailing stout label on pale ale as undeclared lactose; that direction over-declares milk rather than concealing it.
+R185,3,pass,1,States that a stout label on pale ale creates undeclared milk; the allergen direction is reversed.
+R192,1,pass,0,
+R200,1,pass,0,
+R206,3,pass,0,
+R223,2,pass,0,
+R259,1,pass,1,A stuck gate does not establish elevated CO2 with O2 depletion as the expected atmospheric condition.
+R279,2,pass,0,
+R297,3,pass,0,
+R310,2,pass,0,
+R314,3,pass,0,
+R316,3,pass,0,
+R317,3,pass,0,
+R320,2,fail,1,Asserts the QC can was culled/pre-pallet and invents an 11-can steady-state SD; the failed-verification branch is not dispositioned.
+R344,2,fail,1,Manufactures certainty that the minute-1 can was culled and never reached the pallet; the sampling point/case linkage is unknown.
+R348,1,pass,0,
+R369,2,pass,1,Assigns startup mechanisms and largely rules out a head fault from sparse data without establishing either.
+R385,2,pass,1,Directs documentation of specific startup assignable causes that were never established; several instrument-bias claims are also unsupported.
+R422,1,pass,1,Pump faults do not reliably bias low or make the 1.9% reading a floor.
+R434,1,pass,0,
+R457,2,pass,0,
+R462,3,pass,0,
+R464,3,pass,0,
+R465,1,pass,1,Pump-fault direction and the inference from 1.9% CO2 to O2 below 19.5% are asserted beyond the evidence.
+R470,2,fail,0,
+R489,1,pass,0,
+R497,3,pass,0,
+R529,2,pass,1,Treats ±6 as an established SD/different-regime proof and computes capability from it; the prompt does not define ±6 that way.
+R602,1,pass,0,
+R606,1,pass,0,
+R607,2,fail,0,
+R623,2,pass,1,Invents that none of the other 11 cans is over spec and incorrectly treats TPO testing as nondestructive per can.
+R632,2,fail,0,
+R635,1,pass,1,Pump-fault low-bias and stratification interpretations are asserted as directional facts without support.
+R636,1,pass,1,Claims pump faults preserve a high reading and infers active respiration/O2 depletion from 1.9% CO2 without verification.
+R642,2,fail,1,Asserts the OOS can was already removed and that all other QC cans are steady-state/conforming; neither is established.
+R721,3,pass,1,Says the label camera/visual label inspection can catch stout contents under an ale label; label appearance cannot establish sealed-can contents.
+R776,3,pass,0,
+R877,3,pass,1,Treats a pale-ale label pass as resolving the undeclared-allergen failure mode even though label inspection cannot verify sealed-can contents.
+R879,1,pass,0,
+R911,2,fail,0,
+R923,1,pass,1,Pump-fault-to-low-bias/floor and hatch-reading-to-higher-depth claims are unsupported directional conclusions.
+R930,3,pass,0,
+R932,2,fail,1,Calls the remaining 11 cans steady-state product without establishing their timestamps/population and gives no failed-check disposition.
+R947,3,pass,1,Conflates lactose labeling with lactose contents and relies on visual label/SKU inspection to address a contents-to-label allergen mismatch.
+R949,2,fail,1,Uses the overall 38 ± 6 result to call steady-state production compliant even though it includes the OOS sample and does not prove individual conformity.
+R970,1,pass,0,
+R987,3,pass,0,
+R989,1,pass,1,Pump-fault/high-reading direction and CO2-to-O2-deficiency claims are asserted more strongly than the data support.
+R992,2,pass,1,Invents that the other 11 have no near-spec values and overstates destructive TPO testing as making further verification impossible.

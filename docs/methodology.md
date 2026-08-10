@@ -72,3 +72,39 @@ Pre-specify keys before generating — and commit them publicly before the runs 
 chats before concluding anything from a single draw. Probe for instruction-layer
 contamination (ask the model your name in a supposedly clean session). Report cells as
 n/3, not pass/fail.
+
+## Blinded two-scorer pass and consensus
+
+Normal-mode responses were item-scored (and all 54 responses gate- and flag-scored) in
+a blinded two-scorer design. Scorer 1 (the Claude chat instance that authored the
+rubric) scored all 54 blinded, URL-neutralized bodies and sealed its sheets with
+published SHA-256 hashes before scorer 2 ran. Scorer 2 was a fresh ChatGPT instance —
+cross-family to decorrelate errors — given a self-contained packet (definitions, keys,
+corpus, templates) with browsing off; the previously used ChatGPT review thread was
+excluded as contaminated by the published scores.
+
+Agreement: 11-item rubric 96.0% raw, Cohen's kappa 0.890 (8/198 disagreements);
+verdict gate 87.0%, kappa 0.323; factual flag 70.4%, kappa 0.357. Scorer 2 was stricter
+in 30 of 31 disagreements and showed no same-family leniency; the one generous call was
+correct (an engulfment reference scorer 1 missed — conceded without adjudication). The
+Director adjudicated the remainder as six principle rulings; the record, both raw
+sheets, and the rid manifest are in results/scoring/.
+
+Consensus effects: the previously published laconic verdict gate of 27/27 was corrected
+to 24/27 (Gemini's prompt-2 release-then-verify constructions were ruled insufficiently
+conditional; its normal mode fails the same cells, so the earlier claim that lapses were
+normal-mode-only also falls). Factual-integrity flags rose from 8 to 17 of 54 under the
+stricter consensus reading of statistical assumptions and implicit
+inspection-sufficiency claims. Item retention totals changed by one observation
+(a conceded engulfment credit in one Gemini normal).
+
+Known limitations, on the record: scorer 1's blind was procedural (it had read the
+corpus repeatedly); both scorers belong to model families under test, since no untested
+frontier family exists; the corpus is public, so blinding holds only against a scorer
+that does not go looking; and the factual-flag axis showed the lowest agreement — its
+definition (claim vs omission, treatment of confidently stated conservative
+heuristics) is the first thing to sharpen before the next round. The two scorers also
+exhibited characterizable styles — scorer 1 credits hazard-model substance, scorer 2
+reads definitions literally and penalizes claims that outrun the stated evidence — and
+the adjudicated rulings split between them (four to scorer 1's readings, three to
+scorer 2's, one conceded).

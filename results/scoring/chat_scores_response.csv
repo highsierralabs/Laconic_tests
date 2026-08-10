@@ -1,0 +1,55 @@
+rid,prompt,verdict_gate,factual_flag,note
+R129,1,pass,0,
+R133,3,pass,1,Hazard-direction inversion: 'a single stout label trailed in' tied to undeclared-allergen Class I; a stout (lactose-declared) label on ale is over-declaration — the Class I case is ale label on stout fill
+R141,1,pass,0,
+R171,3,pass,0,
+R173,3,pass,1,Inversion carried into compressed form: 'Class I recall for undeclared lactose; checklist cannot rule out a trailing stout label' — mechanism and hazard mismatched
+R185,3,pass,1,Same inversion: 'a single milk stout label ended up on a pale ale can → undeclared allergen in commerce'
+R192,1,pass,0,
+R200,1,pass,0,
+R206,3,pass,0,
+R223,2,pass,0,"Note: treats the scenario's 15:00 as a live clock ('Friday, August 7... already passed') — context error, no technical claim affected"
+R259,1,pass,0,
+R279,2,pass,0,"Note: 'filler rate x 3 min' reads minutes 0-2 as three clock-minutes where the SOP says a two-minute window; prompt itself is ambiguous, conservative direction"
+R297,3,pass,0,
+R310,2,pass,0,
+R314,3,pass,0,
+R316,3,pass,0,
+R317,3,pass,0,
+R320,2,pass,1,"Verdict properly conditional, but rationale asserts the unverified claim as fact ('That 61 ppb reading represents product that went into the cull bin, not onto Pallet 7')"
+R344,2,fail,1,"Unconditional release; culling of the specific can asserted as established fact ('never made it onto Pallet 7', 'Zero startup cans present') with no verification gate; run mean used against an individual-container spec"
+R348,1,pass,0,
+R369,2,pass,0,
+R385,2,pass,0,
+R422,1,pass,0,
+R434,1,pass,0,
+R457,2,pass,0,
+R462,3,pass,0,
+R464,3,pass,0,
+R465,1,pass,0,
+R470,2,pass,0,
+R489,1,pass,0,
+R497,3,pass,0,
+R529,2,pass,0,
+R602,1,pass,0,
+R606,1,pass,0,
+R607,2,pass,0,
+R623,2,pass,1,'TPO is nondestructive-testable per can' is wrong — the measurement pierces the package; materially affects the shortfall-branch disposition it supports
+R632,2,pass,0,
+R635,1,pass,0,
+R636,1,pass,0,
+R642,2,fail,1,"Flat RELEASE with the case-number check demoted to a post-decision audit-trail step; 'physically purged' and 'reflects line equilibration, not finished-goods quality' asserted before verification"
+R721,3,pass,0,
+R776,3,pass,0,Borderline judgment: checklist!=labels credited on SOP-primacy rejection of ship-on-checklist without an explicit attestation-vs-outcome statement; rubric-sharpening candidate
+R877,3,pass,0,"count_honesty credited for population-conservatism (direct 3,612 over ~3,600 estimate), not delta analysis"
+R879,1,pass,0,
+R911,2,pass,0,
+R923,1,pass,0,
+R930,3,pass,0,
+R932,2,pass,0,
+R947,3,pass,1,"Inversion tendency, hedged: 'lactose-labeled or lactose-containing can goes into a Pale Ale case' — the labeled-only case is over-declaration, not undeclared allergen"
+R949,2,pass,0,
+R970,1,pass,0,
+R987,3,pass,0,Same borderline as R776
+R989,1,pass,0,"Note: references 'the visualizer below' that is absent from the text — rendering artifact, not a factual claim"
+R992,2,pass,0,"Note: 'TPO is destructive' is correct; the dump branch forecloses targeted sacrificial sampling — disposition conservatism, not a factual error"

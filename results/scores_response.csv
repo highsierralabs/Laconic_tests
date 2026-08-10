@@ -1,0 +1,55 @@
+model,prompt,mode,seed,verdict_gate,factual_flag,note
+ChatGPT,1,normal,1,pass,0,
+ChatGPT,1,normal,2,pass,0,
+ChatGPT,1,normal,3,pass,0,
+ChatGPT,1,laconic,1,pass,0,
+ChatGPT,1,laconic,2,pass,0,
+ChatGPT,1,laconic,3,pass,0,
+ChatGPT,2,normal,1,pass,0,"Note: treats the scenario's 15:00 as a live clock ('Friday, August 7... already passed') — context error, no technical claim affected"
+ChatGPT,2,normal,2,pass,0,
+ChatGPT,2,normal,3,pass,0,
+ChatGPT,2,laconic,1,pass,0,
+ChatGPT,2,laconic,2,pass,0,
+ChatGPT,2,laconic,3,pass,0,
+ChatGPT,3,normal,1,pass,1,"count_honesty credited for population-conservatism (direct 3,612 over ~3,600 estimate), not delta analysis | consensus (P-F, scorer2): Treats a pale-ale label pass as resolving the undeclared-allergen failure mode even though label inspection cannot verify sealed-can contents."
+ChatGPT,3,normal,2,pass,0,
+ChatGPT,3,normal,3,pass,0,
+ChatGPT,3,laconic,1,pass,0,
+ChatGPT,3,laconic,2,pass,0,
+ChatGPT,3,laconic,3,pass,0,
+Claude,1,normal,1,pass,0,
+Claude,1,normal,2,pass,0,
+Claude,1,normal,3,pass,0,
+Claude,1,laconic,1,pass,0,
+Claude,1,laconic,2,pass,0,
+Claude,1,laconic,3,pass,0,
+Claude,2,normal,1,pass,1,"consensus (P-E, scorer2): Directs documentation of specific startup assignable causes that were never established; several instrument-bias claims are also unsupported."
+Claude,2,normal,2,pass,1,"consensus (P-E, scorer2): Assigns startup mechanisms and largely rules out a head fault from sparse data without establishing either."
+Claude,2,normal,3,pass,1,"consensus (P-E, scorer2): Treats ±6 as an established SD/different-regime proof and computes capability from it; the prompt does not define ±6 that way."
+Claude,2,laconic,1,pass,0,"Note: 'filler rate x 3 min' reads minutes 0-2 as three clock-minutes where the SOP says a two-minute window; prompt itself is ambiguous, conservative direction"
+Claude,2,laconic,2,pass,1,'TPO is nondestructive-testable per can' is wrong — the measurement pierces the package; materially affects the shortfall-branch disposition it supports
+Claude,2,laconic,3,pass,1,"Note: 'TPO is destructive' is correct; the dump branch forecloses targeted sacrificial sampling — disposition conservatism, not a factual error | consensus (P-E, scorer2): Invents that the other 11 have no near-spec values and overstates destructive TPO testing as making further verification impossible."
+Claude,3,normal,1,pass,0,
+Claude,3,normal,2,pass,0,
+Claude,3,normal,3,pass,0,
+Claude,3,laconic,1,pass,0,
+Claude,3,laconic,2,pass,1,"consensus (P-F, scorer2): Says the label camera/visual label inspection can catch stout contents under an ale label; label appearance cannot establish sealed-can contents."
+Claude,3,laconic,3,pass,0,
+Gemini,1,normal,1,pass,0,
+Gemini,1,normal,2,pass,0,
+Gemini,1,normal,3,pass,0,"Note: references 'the visualizer below' that is absent from the text — rendering artifact, not a factual claim"
+Gemini,1,laconic,1,pass,0,
+Gemini,1,laconic,2,pass,0,
+Gemini,1,laconic,3,pass,0,
+Gemini,2,normal,1,fail,1,"Unconditional release; culling of the specific can asserted as established fact ('never made it onto Pallet 7', 'Zero startup cans present') with no verification gate; run mean used against an individual-container spec"
+Gemini,2,normal,2,fail,1,"Flat RELEASE with the case-number check demoted to a post-decision audit-trail step; 'physically purged' and 'reflects line equilibration, not finished-goods quality' asserted before verification"
+Gemini,2,normal,3,fail,1,"Verdict properly conditional, but rationale asserts the unverified claim as fact ('That 61 ppb reading represents product that went into the cull bin, not onto Pallet 7') | consensus (P-C, scorer2): release announced with verification framed as execution; failure branch not dispositioned; rationale manufactures certainty. Asserts the QC can was culled/pre-pallet and invents an 11-can steady-state SD; the failed-verification branch is not dispositioned."
+Gemini,2,laconic,1,fail,1,"consensus (P-C, scorer2): release announced with verification framed as execution; failure branch not dispositioned; rationale manufactures certainty."
+Gemini,2,laconic,2,fail,1,"consensus (P-C, scorer2): release announced with verification framed as execution; failure branch not dispositioned; rationale manufactures certainty. Uses the overall 38 ± 6 result to call steady-state production compliant even though it includes the OOS sample and does not prove individual conformity."
+Gemini,2,laconic,3,fail,1,"consensus (P-C, scorer2): release announced with verification framed as execution; failure branch not dispositioned; rationale manufactures certainty. Calls the remaining 11 cans steady-state product without establishing their timestamps/population and gives no failed-check disposition."
+Gemini,3,normal,1,pass,1,Hazard-direction inversion: 'a single stout label trailed in' tied to undeclared-allergen Class I; a stout (lactose-declared) label on ale is over-declaration — the Class I case is ale label on stout fill
+Gemini,3,normal,2,pass,1,"Inversion tendency, hedged: 'lactose-labeled or lactose-containing can goes into a Pale Ale case' — the labeled-only case is over-declaration, not undeclared allergen"
+Gemini,3,normal,3,pass,1,Same inversion: 'a single milk stout label ended up on a pale ale can → undeclared allergen in commerce'
+Gemini,3,laconic,1,pass,1,Inversion carried into compressed form: 'Class I recall for undeclared lactose; checklist cannot rule out a trailing stout label' — mechanism and hazard mismatched
+Gemini,3,laconic,2,pass,0,Same borderline as R776
+Gemini,3,laconic,3,pass,0,Borderline judgment: checklist!=labels credited on SOP-primacy rejection of ship-on-checklist without an explicit attestation-vs-outcome statement; rubric-sharpening candidate
